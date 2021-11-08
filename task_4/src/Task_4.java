@@ -122,6 +122,18 @@ public class Task_4 implements Task_4_base {
         // Используйте алгоритм, время работы которого будет пропорционально сумме
         // размеров arr1 и arr2, а не их произведению
 
-        return null;
+        int size=arr1.length+arr2.length;
+        int[] arr3= new int[size];
+        int count=0;
+        for(int i=0;i<arr1.length;i++){
+            arr3[i]=arr1[i];
+            count++;
+        }
+        for(int j=0;j<arr2.length;j++){
+            arr3[count]=arr2[j];
+            count++;
+        }
+        Arrays.sort(arr3);
+        return arr3;
     }
 }
