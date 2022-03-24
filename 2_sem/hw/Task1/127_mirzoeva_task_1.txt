@@ -12,4 +12,5 @@ DoubleLinkedList|48|node.getNext().setNext(node.getPrev()); -> node.getNext().se
 DoubleLinkedList|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_TestValues
 DoubleLinkedList|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_TestValues
 DoubleLinkedList|74| -> size += list.getSize();|insertListBefore_TestSize
-
+DoubleLinkedList|67|list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev());|insertListBefore_TestValues
+DoubleLinkedList|68|list.getTail().setPrev(node); -> list.getTail().setNext(node);|insertListBefore_TestValues
