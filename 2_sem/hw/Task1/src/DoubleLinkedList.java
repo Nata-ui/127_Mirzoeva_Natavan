@@ -14,14 +14,14 @@ public class DoubleLinkedList<T> {
         return size;
     }
     public ListNode<T> getHead() {
-        return dummy.getPrev();
+        return dummy.getNext();
     }
     public ListNode<T> getTail() {
-        return dummy.getNext();
+        return dummy.getPrev();
     }
 
     public ListNode<T> get(int index) {
-        if(index < 0 || index > size)
+        if(index < 0 || index >= size)
             throw new IndexOutOfBoundsException("index out of bounds");
         ListNode<T> cur = getHead();
         for(int i = 0; i < index; ++i)

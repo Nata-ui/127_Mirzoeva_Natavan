@@ -34,7 +34,7 @@ public class Task1_Tests extends Assert {
         try {
             list.get(2);
             fail();
-        } catch (IndexOutOfBoundsException e) { //поиск ощибки
+        } catch (IndexOutOfBoundsException e) { //поиск ошибки
             assertFalse(false);
         }
     }
