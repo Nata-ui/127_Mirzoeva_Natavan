@@ -11,3 +11,5 @@ DoubleLinkedList|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().se
 DoubleLinkedList|48|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|remove_RemoveAElement_TestValue
 DoubleLinkedList|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_TestValues
 DoubleLinkedList|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_TestValues
+DoubleLinkedList|74| -> size += list.getSize();|insertListBefore_TestSize
+
