@@ -1,9 +1,16 @@
 import org.junit.*;
-public class task1_tests extends Assert{
+public class Task1_Tests extends Assert {
     @Test
     public void isEmpty_DoubleLinkedList_checkIsEmpty() {
         DoubleLinkedList<Integer> List = new DoubleLinkedList<>();
         assertTrue(List.isEmpty());
 
+    }
+
+    @Test
+    public void isEmpty_DoubleLinkedList_PushBack() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(10);
+        assertFalse(list.isEmpty());
     }
 }
