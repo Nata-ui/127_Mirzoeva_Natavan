@@ -25,7 +25,7 @@ public class DoubleLinkedList<T> {
             throw new IndexOutOfBoundsException("index out of bounds");
         ListNode<T> cur = getHead();
         for(int i = 0; i < index; ++i)
-            cur = cur.getPrev();
+            cur = cur.getNext();
         return (Node<T>) cur;
     }
 
@@ -44,8 +44,8 @@ public class DoubleLinkedList<T> {
         return insertBefore(getHead(), data);
     }
     public void remove(ListNode<T> node) {
-        node.getPrev().setPrev(node.getNext());
-        node.getNext().setNext(node.getPrev());
+        node.getPrev().setNext(node.getNext());
+        node.getNext().setPrev(node.getPrev());
         size = Math.max(0, size - 1);
     }
 
