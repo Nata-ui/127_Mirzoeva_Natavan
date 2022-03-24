@@ -14,3 +14,6 @@ DoubleLinkedList|56|list.getTail().setPrev(node.getNext()); -> list.getTail().se
 DoubleLinkedList|74| -> size += list.getSize();|insertListBefore_TestSize
 DoubleLinkedList|67|list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev());|insertListBefore_TestValues
 DoubleLinkedList|68|list.getTail().setPrev(node); -> list.getTail().setNext(node);|insertListBefore_TestValues
+
+Node|13|this.next = prev; -> this.next = next;|pushFront_TestValues
+Node|14|this.prev = next; -> this.prev = prev;|pushFront_TestValues
