@@ -75,4 +75,14 @@ public class Task1_Tests extends Assert {
         int l = ((Node<Integer>) list.getTail()).getData();
         assertEquals(1, l);
     }
+
+    @Test
+    public void get_PushFrontEmptyDoubleLinkedList_TestFirst() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        int n = ((Node<Integer>) list.get(0)).getData();
+        assertEquals(1, n);
+    }
 }
