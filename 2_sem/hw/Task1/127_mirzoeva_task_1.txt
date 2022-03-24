@@ -5,4 +5,6 @@ DoubleLinkedList|20|return dummy.getNext() -> return dummy.getPrev()|getTail_Dou
 DoubleLinkedList|44|return insertAfter(getHead(), data) -> return insertBefore(getTail(), data)|getHead_DoubleLinkedList_TestanotherGetHead
 DoubleLinkedList|41|return insertBefore(getTail(), data) -> return insertAfter(getHead(), data)|getHead_DoubleLinkedList_TestanotherGetHead
 DoubleLinkedList|33|--size -> ++size|get_PushFrontEmptyDoubleLinkedList_TestFirst
-DoubleLinkedList|62| -> size += list.getSize()|insertListAfter_TestSize
+DoubleLinkedList|62| -> size += list.getSize();|insertListAfter_TestSize
+DoubleLinkedList|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_TestValues
+
