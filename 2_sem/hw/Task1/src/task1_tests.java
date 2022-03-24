@@ -26,4 +26,16 @@ public class Task1_Tests extends Assert {
         list.pushFront(5);
         assertTrue(1 == list.getSize());
     }
+
+    @Test
+    public void pushFront_DoubleLinkedList_TestAnotherNumber() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        try {
+            list.get(2);
+            fail();
+        } catch (IndexOutOfBoundsException e) { //поиск ощибки
+            assertFalse(false);
+        }
+    }
 }
