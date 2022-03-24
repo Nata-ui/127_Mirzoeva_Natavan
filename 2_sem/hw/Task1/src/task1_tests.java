@@ -85,4 +85,25 @@ public class Task1_Tests extends Assert {
         int n = ((Node<Integer>) list.get(0)).getData();
         assertEquals(1, n);
     }
+
+    @Test
+    public void get_PushBackEmptyDoubleLinkedList_TestFirst() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushBack(3);
+        list.pushBack(2);
+        list.pushBack(1);
+
+        int n = ((Node<Integer>) list.get(0)).getData();
+        assertEquals(1, n);
+    }
+
+    @Test
+    public void remove_PushFrontEmptyDoubleLinkedList_RemoveTestSize() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        list.remove(list.get(0));
+        assertEquals(2, list.getSize());
+    }
 }

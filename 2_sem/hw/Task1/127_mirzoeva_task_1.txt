@@ -3,3 +3,4 @@ DoubleLinkedList|24|if(index < 0 || index > size) -> if(index < 0 || index >= si
 DoubleLinkedList|17|return dummy.getPrev() -> return dummy.getNext()|getHead_DoubleLinkedList_TestanotherGetHead
 DoubleLinkedList|20|return dummy.getNext() -> return dummy.getPrev()|getTail_DoubleLinkedList_TestNewGetTail
 DoubleLinkedList|33|--size -> ++size|get_PushFrontEmptyDoubleLinkedList_TestFirst
+
