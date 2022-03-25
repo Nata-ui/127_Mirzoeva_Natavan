@@ -405,5 +405,15 @@ public class Task1_Tests extends Assert {
         array.popBack();
         assertEquals(4, array.getSize());
     }
-
+    @Test
+    public void TryToRemove_AllowMessage(){
+        DynamicArray<Integer> array = new DynamicArray<>(5);
+        try {
+            array.remove(6);
+            fail();
+        }
+        catch (Exception some) {
+            assertEquals("Index out of bounds", some.getMessage());
+        }
+    }
 }
