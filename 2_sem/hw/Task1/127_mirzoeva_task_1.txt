@@ -25,5 +25,8 @@ DynamicArray|30|if(index < 0 || index > size) -> if(index < 0 || index >= size)|
 DynamicArray|35|if(index < 0 || index > size) -> if(index < 0 || index >= size)|SetIndex_AllowMessage
 DynamicArray|40|if(index < 0 || index > size) -> if(index < 0 || index >= size)|TryToInsertValue_AllowMessage
 DynamicArray|15|data = new Object[capacity] -> data = new Object[size]|SetNumbers_TestValues
+DynamicArray|42|if(capacity < size) { -> if(capacity <= size) {|InsertANumber_TestNewValue
+DynamicArray|49|data[size] = value -> data[index] = value;|InsertANumber_TestNewValue
+
 
 
