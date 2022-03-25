@@ -30,6 +30,7 @@ DynamicArray|49|data[size] = value -> data[index] = value;|InsertANumber_TestNew
 DynamicArray|52|if(capacity < size) { -> if(capacity <= size) {|PushBackNumbers_TestValues
 DynamicArray|56|data[capacity] = value; -> data[size] = value;|PushBackNumbers_TestValues
 DynamicArray|60|if(size < 0) -> if(size <= 0)|PopBackEmptyArray_AllowMessage
+DynamicArray|66|if(index < 0 || index > size) -> if(index < 0 || index >= size)|TryToRemoveOut_AllowMessage
 
 
 
