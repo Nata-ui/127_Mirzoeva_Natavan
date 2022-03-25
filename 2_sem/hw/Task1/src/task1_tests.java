@@ -262,4 +262,9 @@ public class Task1_Tests extends Assert {
         DynamicArray<Integer> array = new DynamicArray<>(5);
         assertEquals(5, array.getSize());
     }
+    @Test
+    public void createArray_getEmptyArray_TestSize(){
+        DynamicArray<Integer> array = new DynamicArray<>();
+        assertEquals(1024, array.getSize());
+    }
 }
