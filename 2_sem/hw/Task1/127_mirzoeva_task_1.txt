@@ -23,3 +23,5 @@ DynamicArray|21|if(newSize > 0) -> if(newSize < 0)|ChangeSize_TestSize
 DynamicArray|27|newSize = size -> size = newSize|ChangeSize_TestSize
 DynamicArray|30|if(index < 0 || index > size) -> if(index < 0 || index >= size)|TryToGetIndex_AllowMessage
 DynamicArray|35|if(index < 0 || index > size) -> if(index < 0 || index >= size)|SetIndex_AllowMessage
+DynamicArray|40|if(index < 0 || index > size) -> if(index < 0 || index >= size)|TryToInsertValue_AllowMessage
+
