@@ -330,4 +330,15 @@ public class Task1_Tests extends Assert {
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
+    @Test
+    public void TryToInsertValue_AllowMessage(){
+        DynamicArray<Integer> array = new DynamicArray<>(5);
+        try {
+            array.insert(5,10);
+            fail();
+        }
+        catch (IndexOutOfBoundsException some) {
+            assertEquals("Index out of bounds", some.getMessage());
+        }
+    }
 }
