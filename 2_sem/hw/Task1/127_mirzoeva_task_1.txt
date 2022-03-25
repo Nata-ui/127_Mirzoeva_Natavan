@@ -22,3 +22,4 @@ DynamicArray|11|size = 1 -> size = DefaultSize|createArray_getEmptyArray_TestSiz
 DynamicArray|21|if(newSize > 0) -> if(newSize < 0)|ChangeSize_TestSize
 DynamicArray|27|newSize = size -> size = newSize|ChangeSize_TestSize
 DynamicArray|30|if(index < 0 || index > size) -> if(index < 0 || index >= size)|TryToGetIndex_AllowMessage
+DynamicArray|35|if(index < 0 || index > size) -> if(index < 0 || index >= size)|SetIndex_AllowMessage
