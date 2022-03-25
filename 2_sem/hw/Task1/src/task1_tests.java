@@ -256,4 +256,10 @@ public class Task1_Tests extends Assert {
         num1 = ((Node<Integer>)list.get(5)).getData();
         assertEquals(6, num1);
     }
+
+    @Test
+    public void createArrayGetSizeArray_PutSize(){
+        DynamicArray<Integer> array = new DynamicArray<>(5);
+        assertEquals(5, array.getSize());
+    }
 }
