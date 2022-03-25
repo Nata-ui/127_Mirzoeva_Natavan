@@ -17,3 +17,5 @@ DoubleLinkedList|68|list.getTail().setPrev(node); -> list.getTail().setNext(node
 
 Node|13|this.next = prev; -> this.next = next;|pushFront_TestValues
 Node|14|this.prev = next; -> this.prev = prev;|pushFront_TestValues
+
+DynamicArray|11|size = 1 -> size = DefaultSize|createArray_getEmptyArray_TestSize
