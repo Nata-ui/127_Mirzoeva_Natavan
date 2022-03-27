@@ -9,7 +9,7 @@ public class Task2_Tests extends Assert {
         MyComparator comparator = new MyComparator() {
             @Override
             public int compare(Object first, Object second) {
-                return 0;
+                return 1;
             }
         };
     }
