@@ -30,5 +30,12 @@ public class Task2_Tests extends Assert {
         bbs.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{20, 90, 167, 253, 18976}, data);
     }
+    @Test
+    public void BubbleSort_sortFirstElement_sort() {
+        BubbleSort<Integer> bbs = new BubbleSort<>();
+        Integer[] data = {2, 11, 15, 8};
+        bbs.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{2, 8, 11, 15}, data);
+    }
 
 }
