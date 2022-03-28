@@ -65,4 +65,11 @@ public class Task2_Tests extends Assert {
         ss.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{2, 8, 11, 15}, data);
     }
+    @Test
+    public void InsertionSort_sortElement_sort() {
+        Integer[] data = {1};
+        Sort<Integer> is = new InsertionSort<>();
+        is.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{1}, data);
+    }
 }
