@@ -97,4 +97,11 @@ public class Task2_Tests extends Assert {
         is.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{20, 90, 167, 253, 18976}, data);
     }
+    @Test
+    public void InsertionSort_sortFirstElement_sort() {
+        Sort<Integer> is = new InsertionSort<>();
+        Integer[] data = {2, 11, 15, 8};
+        is.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{2, 8, 11, 15}, data);
+    }
 }
