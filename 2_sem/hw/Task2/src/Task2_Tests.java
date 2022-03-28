@@ -1,16 +1,19 @@
+import org.junit.Assert;
+import org.junit.Test;
 
-
-import org.junit.*;
 public class Task2_Tests extends Assert {
-    @Test
-    public void bubbleSort_CreateMyBubbleSort_TryToSort() {
-        BubbleSort<Integer> sorter = new BubbleSort<>();
+    static class TestComparator implements MyComparator<Integer> {
 
-        MyComparator comparator = new MyComparator() {
-            @Override
-            public int compare(Object first, Object second) {
-                return 0;
-            }
-        };
+        @Override
+        public int compare(Integer first, Integer second) {
+            return first - second;
+        }
+    }
+    @Test
+    public void BubbleSort_sortElement_sort() {
+        Integer[] data = {1};
+        BubbleSort<Integer> bbs = new BubbleSort<Integer>();
+        bbs.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{1}, data);
     }
 }
