@@ -10,7 +10,7 @@ public class Task2_Tests extends Assert {
         }
     }
     @Test
-    public void BubbleSort_BubbleSort_sosortElement_sort() {
+    public void BubbleSort_SortElement_sort() {
         Integer[] data = {1};
         BubbleSort<Integer> bbs = new BubbleSort<Integer>();
         bbs.sort(data, new TestComparator());
@@ -37,5 +37,11 @@ public class Task2_Tests extends Assert {
         bbs.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{2, 8, 11, 15}, data);
     }
-
+    @Test
+    public void SelectionSort_sortElement_sort() {
+        Integer[] data = {1};
+        Sort<Integer> ss = new SelectionSort<>();
+        ss.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{1}, data);
+    }
 }
