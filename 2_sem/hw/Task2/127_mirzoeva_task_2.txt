@@ -8,3 +8,7 @@ SelectionSort|11|data[data.length - sortedSize] = data[maxInd]; -> data[data.len
 SelectionSort|5|int maxInd = 1; -> int maxInd = 0;| SelectionSort_RandomInts_sort
 SelectionSort|4|for(int sortedSize = 1; sortedSize < data.length - 1; ++sortedSize) { -> for(int sortedSize = 0; sortedSize < data.length - 1; ++sortedSize) {|SelectionSort_sortFirstElement_sort
 
+InsertionSort|6|while (cur > 0 && comparator.compare(data[cur - 1], data[cur]) <= 0){ -> while (cur > 0 && comparator.compare(data[cur - 1], data[cur]) > 0){|InsertionSort_sortArray_sort
+InsertionSort|8|++cur; -> --cur;|InsertionSort_Random_sort
+
+
