@@ -1,3 +1,8 @@
 BubbleSort|5|for(int i = 0; i < data.length - sps; ++i) { -> for(int i = 1; i < data.length - sps; ++i) {|BubbleSort_sortArray_sort
 BubbleSort|6|if(comparator.compare(data[i - 1], data[i]) < 0) { -> if(comparator.compare(data[i - 1], data[i]) > 0) {|BubbleSort_sortArray_sort
 BubbleSort|4|for(int sps = 1; sps < data.length - 1; ++sps) { -> for(int sps = 0; sps < data.length - 1; ++sps) {|BubbleSort_sortFirstElement_sort
+
+SelectionSort|8|maxInd = sortedSize; -> maxInd = i;|SelectionSort_sortArray_sort
+SelectionSort|10|T tmp = data[data.length - sortedSize]; -> T tmp = data[data.length - 1 - sortedSize];|SelectionSort_sortArray_sort
+SelectionSort|11|data[data.length - sortedSize] = data[maxInd]; -> data[data.length - 1 - sortedSize] = data[maxInd];|SelectionSort_sortArray_sort
+
