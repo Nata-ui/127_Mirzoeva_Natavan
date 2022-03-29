@@ -40,15 +40,22 @@ public class Task3_Tests extends Assert {
     @Test
     public void MergeSort_ArrayFirstElements_sort(){
         Integer[] arr = new Integer[]{3,2,4};
-        MergeSort<Integer> qs = new MergeSort();
+        MergeSort<Integer> qs = new MergeSort<>();
         qs.sort(arr, new TestComparator());
         assertArrayEquals(new Integer[]{2,3,4}, arr);
     }
     @Test
     public void MergeSort_SortArray_ArrayNotChange(){
         Integer[] arr = new Integer[]{1,2,3,4};
-        MergeSort<Integer> qs = new MergeSort();
+        MergeSort<Integer> qs = new MergeSort<>();
         qs.sort(arr, new TestComparator());
         assertArrayEquals(new Integer[]{1,2,3,4}, arr);
+    }
+    @Test
+    public void MergeSort_ArrayTwoSameElements_Sort(){
+        Integer[] arr = new Integer[]{2,4,3,2};
+        MergeSort<Integer> qs = new MergeSort<>();
+        qs.sort(arr, new TestComparator());
+        assertArrayEquals(new Integer[]{2,2,3,4}, arr);
     }
 }
