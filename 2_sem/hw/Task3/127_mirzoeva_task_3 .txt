@@ -13,6 +13,9 @@ MergeSort|32| to[resPos] = from[secondFocus++]; -> to[resPos++] = from[secondFoc
 MergeSort|18| mergeSortRec(sorting, buffer, middle + 1, end); -> mergeSortRec(buffer,sorting, middle + 1, end);|MergeSort_ArrayTwoSameElements_Sort
 MergeSort|34| to[resPos++] = from[firstFocus]; -> to[resPos++] = from[firstFocus++];|MergeSort_UnsortedArray_Sort
 
+HeapSort|10|swap(0, data.length - sortedSize); -> swap(0, data.length - sortedSize - 1);|HeapSort_sortTwoElements_sort
+
+
 
 
 
