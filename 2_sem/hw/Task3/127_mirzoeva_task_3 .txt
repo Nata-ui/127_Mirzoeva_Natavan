@@ -11,6 +11,8 @@ MergeSort|35| else if (comparator.compare(from[firstFocus], from[secondFocus]) >
 MergeSort|17| mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(buffer,sorting, begin, middle); |MergeSort_ArrayFirstElements_sort
 MergeSort|32| to[resPos] = from[secondFocus++]; -> to[resPos++] = from[secondFocus++];|MergeSort_SortArray_ArrayNotChange
 MergeSort|18| mergeSortRec(sorting, buffer, middle + 1, end); -> mergeSortRec(buffer,sorting, middle + 1, end);|MergeSort_ArrayTwoSameElements_Sort
+MergeSort|34| to[resPos++] = from[firstFocus]; -> to[resPos++] = from[firstFocus++];|MergeSort_UnsortedArray_Sort
+
 
 
 
