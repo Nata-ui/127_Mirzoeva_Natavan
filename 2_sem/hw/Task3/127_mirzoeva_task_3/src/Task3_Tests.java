@@ -16,4 +16,11 @@ public class Task3_Tests extends Assert {
         qs.sort(arr, new TestComparator());
         assertArrayEquals(new Integer[]{2, 4}, arr);
     }
+    @Test
+    public void QuickSort_sortTwoSameElements_sort(){
+        Integer[] arr = new Integer[]{2,4,2,5};
+        QuickSort<Integer> qs = new QuickSort<>();
+        qs.sort(arr, new TestComparator());
+        assertArrayEquals(new Integer[]{2,2,4,5}, arr);
+    }
 }
