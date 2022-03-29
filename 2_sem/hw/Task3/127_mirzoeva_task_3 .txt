@@ -5,3 +5,9 @@ QuickSort|29|swap(data, left+1, right);-> swap(data, left, right);|QuickSort_sor
 QuickSort_UnsortedArray_sort
 QuickSort|13|qSortRec(data, b, base - 2); -> qSortRec(data, b, base - 1);|QuickSort_UnsortedArray_sort
 QuickSort|14|qSortRec(data, base + 2, e); -> qSortRec(data, base + 1, e);|QuickSort_UnsortedArray_sort
+
+MergeSort|19|merge(buffer, sorting, begin, middle - begin, end - middle); -> merge(buffer, sorting, begin, middle - begin+1, end - middle);|MergeSort_sortTwoElements_sort
+MergeSort|35| else if (comparator.compare(from[firstFocus], from[secondFocus]) > 0) ->  else if (comparator.compare(from[firstFocus], from[secondFocus]) < 0)|MergeSort_sortTwoElements_sort
+MergeSort|17| mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(buffer,sorting, begin, middle); |MergeSort_ArrayFirstElements_sort
+
+
