@@ -109,5 +109,4 @@ public class Task3_Tests extends Assert {
         hs.sort(arr, new TestComparator());
         assertArrayEquals(new Integer[]{1,1,2,2,3,5,5,5}, arr);
     }
-
 }
