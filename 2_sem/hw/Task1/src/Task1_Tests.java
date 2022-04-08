@@ -7,7 +7,6 @@ public class Task1_Tests extends Assert {
         list.pushFront(10);
         assertEquals(1, list.getSize());
     }
-
     @Test
     public void pushFront_pushToEmptyList_HeadAndTailIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
@@ -18,7 +17,6 @@ public class Task1_Tests extends Assert {
         assertEquals(10, tail.getData().intValue());
         assertEquals(head, tail);
     }
-
     @Test
     public void pushFront_pushTwoElements_HeadAndTailIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
@@ -29,7 +27,6 @@ public class Task1_Tests extends Assert {
         assertEquals(20, head.getData().intValue());
         assertEquals(10, tail.getData().intValue());
     }
-
     @Test
     public void pushBack_pushToEmptyList_HeadAndTailIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
@@ -40,7 +37,6 @@ public class Task1_Tests extends Assert {
         assertEquals(10, tail.getData().intValue());
         assertEquals(head, tail);
     }
-
     @Test
     public void pushBack_pushTwoElements_HeadAndTailIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
@@ -51,7 +47,6 @@ public class Task1_Tests extends Assert {
         assertEquals(10, head.getData().intValue());
         assertEquals(20, tail.getData().intValue());
     }
-
     @Test
     public void insertAfter_insertOneElement_getSize() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
