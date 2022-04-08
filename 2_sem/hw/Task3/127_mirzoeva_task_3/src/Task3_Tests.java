@@ -23,4 +23,11 @@ public class Task3_Tests extends Assert {
         hs.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{1, 2, 3}, data);
     }
+    @Test
+    public void HeapSort_SortData_DataIsCorrect(){
+        HeapSort<Integer> hs = new HeapSort<>();
+        Integer[] data = {1, 3, 2};
+        hs.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{1, 2, 3}, data);
+    }
 }
