@@ -2,7 +2,7 @@ HeapSort.java|10|swap(0, data.length - sortedSize); -> swap(0, data.length - sor
 HeapSort.java|17|for (int i = start; i >= 1; --i) -> for (int i = start; i >= 0; --i)|HeapSort_SortSortedData_DataIsCorrect
 HeapSort.java|18|siftDown(i, 2 * i, 2 * i + 1, data.length); -> siftDown(i, 2 * i + 1, 2 * i + 2, data.length);|HeapSort_SortSortedData_DataIsCorrect
 HeapSort.java|38|siftDown(right, 2 * right + 1, 2 * right + 2, data.length); -> siftDown(right, 2 * right + 1, 2 * right + 2, size);|HeapSort_SortBigUnsortedArray_DataIsCorrect
-
+HeapSort.java|34|siftDown(left, 2 * left, 2 * left + 1, size); -> siftDown(left, 2 * left + 1, 2 * left + 2, size);|HeapSort_SortBigUnsortedArrayContainingSameNumbers_DataIsCorrect
 
 
 
