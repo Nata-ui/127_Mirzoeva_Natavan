@@ -24,5 +24,13 @@ public class Task1_Tests extends Assert {
         }
 
     }
+    @Test
+    public void ЗushElements_ThreeElements_TheFirstOneIsCorrect() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        assertEquals(1, getIntValue(list.get(0)));
+    }
 }
 
