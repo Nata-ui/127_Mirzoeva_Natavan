@@ -107,5 +107,11 @@ public class Task3_Tests extends Assert {
         ms.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{0, 0, 1, 1, 2, 2, 2}, data);
     }
-
+    @Test
+    public void QuickSort_SortSameDigits_DataIsCorrect(){
+        QuickSort<Integer> qs = new QuickSort<>();
+        Integer[] data = {1, 1, 1};
+        qs.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{1, 1, 1}, data);
+    }
 }
