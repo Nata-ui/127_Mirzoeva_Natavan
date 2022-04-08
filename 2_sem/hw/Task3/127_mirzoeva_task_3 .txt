@@ -9,7 +9,8 @@ MergeSort.java|17|mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(
 MergeSort.java|18|mergeSortRec(sorting, buffer, middle + 1, end); -> mergeSortRec(buffer, sorting, middle + 1, end);|MergeSort_SortBigUnsortedArray_DataIsCorrect
 MergeSort.java|34|to[resPos++] = from[firstFocus]; -> to[resPos++] = from[firstFocus++];|MergeSort_SortNegativeNumbersWithNormal_DataIsCorrect
 MergeSort.java|32|to[resPos] = from[secondFocus++]; -> to[resPos++] = from[secondFocus++];|MergeSort_SortBigUnsortedArrayContainingSameNumbers_DataIsCorrect
-
+QuickSort.java|12|int base = split(data, e, b); -> int base = split(data, b, e);|QuickSort_SortUnsortedData_DataIsCorrect
+QuickSort.java|24|swap(data, left, baseElem); -> swap(data, left - 1, baseElem);|QuickSort_SortUnsortedData_DataIsCorrect
 
 
 

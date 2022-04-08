@@ -121,4 +121,13 @@ public class Task3_Tests extends Assert {
         qs.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{1, 2, 3}, data);
     }
+
+    @Test
+    public void QuickSort_SortUnsortedData_DataIsCorrect(){
+        QuickSort<Integer> qs = new QuickSort<>();
+        Integer[] data = {1, 3, 2};
+        qs.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{1, 2, 3}, data);
+    }
+
 }
