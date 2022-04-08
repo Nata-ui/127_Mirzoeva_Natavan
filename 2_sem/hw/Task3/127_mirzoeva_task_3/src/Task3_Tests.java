@@ -129,5 +129,11 @@ public class Task3_Tests extends Assert {
         qs.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{1, 2, 3}, data);
     }
-
+    @Test
+    public void QuickSort_SortNegativeNumbersWithNormal_DataIsCorrect(){
+        QuickSort<Integer> qs = new QuickSort<>();
+        Integer[] data = {1, 0, -1};
+        qs.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{-1, 0, 1}, data);
+    }
 }
