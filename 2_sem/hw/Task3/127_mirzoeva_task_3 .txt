@@ -5,6 +5,9 @@ HeapSort.java|38|siftDown(right, 2 * right + 1, 2 * right + 2, data.length); -> 
 HeapSort.java|34|siftDown(left, 2 * left, 2 * left + 1, size); -> siftDown(left, 2 * left + 1, 2 * left + 2, size);|HeapSort_SortBigUnsortedArrayContainingSameNumbers_DataIsCorrect
 MergeSort.java|35|else if (comparator.compare(from[firstFocus], from[secondFocus]) > 0) -> else if (comparator.compare(from[firstFocus], from[secondFocus]) < 0)|MergeSort_SortSortedData_DataIsCorrect
 MergeSort.java|19|merge(buffer, sorting, begin, middle - begin, end - middle); -> merge(buffer, sorting, begin, middle - begin + 1, end - middle);|MergeSort_SortUnsortedData_DataIsCorrect
+MergeSort.java|17|mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(buffer, sorting, begin, middle);|MergeSort_SortBigUnsortedArray_DataIsCorrect
+MergeSort.java|18|mergeSortRec(sorting, buffer, middle + 1, end); -> mergeSortRec(buffer, sorting, middle + 1, end);|MergeSort_SortBigUnsortedArray_DataIsCorrect
+
 
 
 
