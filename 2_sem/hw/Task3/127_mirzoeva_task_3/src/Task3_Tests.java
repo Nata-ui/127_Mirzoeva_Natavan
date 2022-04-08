@@ -100,4 +100,12 @@ public class Task3_Tests extends Assert {
         ms.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, data);
     }
+    @Test
+    public void MergeSort_SortBigUnsortedArrayContainingSameNumbers_DataIsCorrect(){
+        MergeSort<Integer> ms = new MergeSort<>();
+        Integer[] data = {0, 0, 1, 2, 2, 1, 2};
+        ms.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{0, 0, 1, 1, 2, 2, 2}, data);
+    }
+
 }
