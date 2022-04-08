@@ -61,7 +61,6 @@ public class Task1_Tests extends Assert {
         list.insertAfter(head, 15);
         assertEquals(3, list.getSize());
     }
-
     @Test
     public void insertBefore_insertOneElements_HeadAndTailIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
@@ -143,7 +142,6 @@ public class Task1_Tests extends Assert {
         Node<Integer> item2 = (Node<Integer>) list.getTail();
         assertEquals(10, item2.getData().intValue());
     }
-
     @Test
     public void insertListAfter_insertList_SizeIsCorrect() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
