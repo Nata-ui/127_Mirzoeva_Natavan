@@ -30,4 +30,12 @@ public class Task3_Tests extends Assert {
         hs.sort(data, new TestComparator());
         assertArrayEquals(new Integer[]{1, 2, 3}, data);
     }
+    @Test
+    public void HeapSort_SortNegativeNumbersWithNormal_DataIsCorrect(){
+        HeapSort<Integer> hs = new HeapSort<>();
+        Integer[] data = {1, 0, -1};
+        hs.sort(data, new TestComparator());
+        assertArrayEquals(new Integer[]{-1, 0, 1}, data);
+    }
+
 }
