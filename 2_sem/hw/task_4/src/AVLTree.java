@@ -18,7 +18,6 @@ public class AVLTree<T> implements BinarySearchTree<T> {
             this.left = null;
             this.right = null;
             height = 1;
-            size = 0;
         }
 
         void restoreHeight() {
@@ -80,8 +79,10 @@ public class AVLTree<T> implements BinarySearchTree<T> {
     }
 
     private AVLTreeNode insertRec(AVLTreeNode root, T value) {
-        if(comparator.compare(value, root.data) == 0)
+        if(comparator.compare(value, root.data) == 0) {
+            --size;
             return root;
+        }
         else if(comparator.compare(value, root.data) < 0) {
             return insertToLeftRec(root, value);
         }
@@ -156,13 +157,13 @@ public class AVLTree<T> implements BinarySearchTree<T> {
         } else {
             return removeFromLeft(node);
         }
-        return null;
+        return root;
     }
 
     private AVLTreeNode removeFromLeft(AVLTreeNode node) {
         AVLTreeNode pred = maxRec(node.left);
         node.data = pred.data;
-        deleteRec(pred);
+        var nRoot = deleteRec(pred);
 
         node.restoreHeight();
         if(node.balance() == -2) {
@@ -176,13 +177,13 @@ public class AVLTree<T> implements BinarySearchTree<T> {
                 return rotateLeft(root);
             }
         }
-        return null;
+        return nRoot;
     }
 
     private AVLTreeNode removeFromRight(AVLTreeNode node) {
         AVLTreeNode succ = minRec(node.right);
         node.data = succ.data;
-        deleteRec(succ);
+        var nRoot = deleteRec(succ);
 
         node.restoreHeight();
         if(node.balance() == 2) {
@@ -195,7 +196,7 @@ public class AVLTree<T> implements BinarySearchTree<T> {
                 return rotateRight(root);
             }
         }
-        return null;
+        return nRoot;
     }
 
     private boolean isLeaf(AVLTreeNode node) {
@@ -206,7 +207,8 @@ public class AVLTree<T> implements BinarySearchTree<T> {
         AVLTreeNode right = center.right;
         replaceOnParent(center, right);
         center.right = right.left;
-        center.right.parent = center;
+        if(center.right != null)
+            center.right.parent = center;
         right.left = center;
         center.parent = right;
         center.restoreHeight();
@@ -217,7 +219,8 @@ public class AVLTree<T> implements BinarySearchTree<T> {
         AVLTreeNode left = center.left;
         replaceOnParent(center, left);
         center.left = left.right;
-        center.left.parent = center;
+        if(center.left != null)
+            center.left.parent = center;
         left.right = center;
         center.parent = left;
         center.restoreHeight();
@@ -234,7 +237,8 @@ public class AVLTree<T> implements BinarySearchTree<T> {
         }
         if(node.parent.left == node)
             node.parent.left = newNode;
-        node.parent.right = newNode;
+        else
+            node.parent.right = newNode;
         if(newNode != null)
             newNode.parent = node.parent;
     }
@@ -277,16 +281,14 @@ public class AVLTree<T> implements BinarySearchTree<T> {
             return lastLeftParent;
         }
         if(comparator.compare(root.data, value) < 0)
-            return predecessorRec(root.right, lastLeftParent, value);
-        return predecessorRec(root.left, root, value);
+            return successorRec(root.right, lastLeftParent, value);
+        return successorRec(root.left, root, value);
     }
 
     @Override
     public boolean search(T value) {
         AVLTreeNode node = searchRec(root, value);
-        if(node == null)
-            return false;
-        return true;
+        return node != null;
     }
 
     @Override
@@ -312,8 +314,5 @@ public class AVLTree<T> implements BinarySearchTree<T> {
         if(comparator.compare(root.data, value) > 0)
             return searchRec(root.left, value);
         return searchRec(root.right, value);
-    }
-    public T show(AVLTreeNode root){
-        return (T) root.right;
     }
 }
