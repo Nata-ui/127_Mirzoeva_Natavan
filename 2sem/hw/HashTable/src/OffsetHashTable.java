@@ -63,16 +63,14 @@ public class OffsetHashTable implements HashTable {
 
     @Override
     public void print() {
-        System.out.print('(');
         for (int i = 0; i < size; i++) {
             if(data[i] >= 0)
-                System.out.print(i + "-" + data[i] + ":" + hash(data[i]));
+                System.out.print(data[i]);
             else
                 System.out.print('x');
             if(i < size - 1)
                 System.out.print(" ");
         }
-        System.out.print(')');
     }
 
 

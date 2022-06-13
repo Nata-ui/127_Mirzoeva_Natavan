@@ -46,7 +46,7 @@ public class ListHashTable implements HashTable {
     private void printList(List list) {
         if (list != null){
             System.out.print(list.data);
-            System.out.print(" -> ");
+            System.out.print(" ");
             printList(list.next);
         } else {
             System.out.print('x');
